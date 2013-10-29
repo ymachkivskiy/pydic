@@ -112,6 +112,15 @@ class PyDic(object):
         else:
             return self.path
 
+    def forms_for_prefix(self, prefix):
+        """
+        :param prefix: prefix of words to search
+        :type prefix: unicode
+        :return: list of words which have given prefix
+        """
+
+        return self.hash.keys(prefix)
+
     def id(self, form):
         """
         Returns a list of PyDicId that match a given word form
